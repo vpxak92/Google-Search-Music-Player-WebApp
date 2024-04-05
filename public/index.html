@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/public/styles.css">
+    <script type="text/javascript" src="/public/scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Effectuez une recherche">
+            <button type="submit" id="searchButton">Recherchez</button>
+        </form>
+        <div id="searchResults"></div>
+    </div>
+    <div>
+        <form id="uploadFile">
+            <input type="file" id="mp3file" accept=".mp3" required>
+            <button type="submit" id="uploadButton">Upload File</button>
+            <audio controls id="audioPlayer">
+                <source src="" type="audio/mpeg" id="evian">
+            </audio>
+        </form>
+    </div>
+</body>
+
+</html>

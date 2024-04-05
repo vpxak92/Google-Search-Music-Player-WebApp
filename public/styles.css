@@ -1,0 +1,60 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+#page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#searchForm {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 3px;
+}
+
+#searchResults div {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchResults h3 {
+    margin-top: 0;
+}
+
+#uploadFile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px
+}
+
+#uploadButton {
+    margin-right: 30px;
+}
