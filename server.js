@@ -16,9 +16,9 @@ const port = process.env.PORT || 3000;
 const app = express();
 const api_key = process.env.API_KEY;
 const motor_id = process.env.MOTOR_ID;
-const limiter = rateLimit({ windowMs: 60 * 1000,  limit: 10 });
+const limiter = rateLimit({ windowMs: 60 * 1000,  limit: 25 });
 
-app.use(limiter);   // Rate limiting ( 10req/min )
+app.use(limiter);   // Rate limiting ( 25req/min )
 app.use(bodyParser.json());   // Parsing incoming JSON requests
 app.use(   // Setting up Helmet middleware
     helmet({
