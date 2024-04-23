@@ -13,8 +13,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({ query: userQuery })
             });
             const data = await response.json();
-            // Displaying search results
-            displaySearchResults(data);
+            if (!data.errors) {
+                displaySearchResults(data);    // Displaying search results
+            } else {
+                console.log(data.errors[0].msg);
+            }
         } catch (error) {
             console.error('Error while fetching search results:', error);
         }
@@ -25,8 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         const file = document.getElementById("mp3file").files[0];
         try {
-            // Validating uploaded file
-            if (validateFile(file) === true) {
+            if (validateFile(file) === true) {   // Validating uploaded file
                 // Uploading file to server
                 const formData = new FormData();
                 formData.append('mp3file', file);
@@ -35,11 +37,10 @@ window.addEventListener("DOMContentLoaded", () => {
                     body: formData
                 });
                 const data = await response.json();
-                // Updating audio player with uploaded file
-                updateAudioPlayer(data.filePath);
+                updateAudioPlayer(data.filePath);   // Updating audio player with uploaded file
             }
         } catch (error) {
-            console.error('Error while uploading file:', error);
+            console.log(error);
         }
     });
 });
